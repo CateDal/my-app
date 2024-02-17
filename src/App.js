@@ -1,4 +1,29 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Users from './components/User'
+import CreateUser from './components/CreateUser'
+import UpdateUser from './components/UpdateUser'
+
+function App() {
+
+    return( 
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Users />}></Route>
+                <Route path='/create' element={<CreateUser />}></Route>
+                <Route path='/edit/:id' element={<UpdateUser />}></Route>
+            </Routes>
+        </BrowserRouter>
+    )
+}
+
+export default App
+
+
+
+
+
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
